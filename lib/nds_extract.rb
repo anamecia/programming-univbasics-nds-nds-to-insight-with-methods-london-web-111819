@@ -5,7 +5,6 @@ require 'pp'
 # The return value should be like:
 #
 # { directorOne => allTheMoneyTheyMade, ... }
-pp directors_database
 
 def directors_totals(nds)
   result = {}
@@ -24,6 +23,7 @@ def gross_for_director(director_data)
     total = 0 
     inner_index = 0
     while inner_index < director_data[:movies].length do 
+      pp 
       total += director_data[:movies][inner_index][:worldwide_grosses]
       inner_index += 1
     end
